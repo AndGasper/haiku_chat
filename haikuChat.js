@@ -1,4 +1,4 @@
-$(document).ready(initialize)
+$(document).ready(initialize);
 function initialize() {
     htmlElementsSetup;
     clickHandlers;
@@ -19,18 +19,17 @@ function htmlElementsSetup() {
     var haikuLine1 = $("<input type = 'text'>");
     var haikuLine2 = $("<input type = 'text'>");
     var haikuLine3 = $("<input type = 'text'>");
-    var submitButton = $("<button>").text("Check if you've made a haiku");
+    var submitButton = $("<button value ='Check haiku'>");
+    $(submitButton).on("click",getUserInput);
 
     $(haikuDiv).appendTo("body");
     $(haikuLine1).appendTo(haikuDiv);
     $(haikuLine2).appendTo(haikuDiv);
     $(haikuLine3).appendTo(haikuDiv);
-
-
-
-});
-function clickHandlers() {
-
+    $(submitButton).appendTo(haikuDiv);
+}
+function getUserInput() {
+console.log("Blah!");
 }
 
 function syllableCount(userString, vowels) {
