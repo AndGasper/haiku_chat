@@ -1,0 +1,13 @@
+.h1 {
+    margin: 12px;
+}
+.haikuEntry > * {
+    display: inline-block;
+    margin: 12px;
+}
+
+.outputDiv {
+    border: black solid;
+    margin: 12px;
+    font-weight: bold;
+}
