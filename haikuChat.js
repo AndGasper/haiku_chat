@@ -36,11 +36,18 @@ function htmlElementsSetup() {
 
     $(syllableOutputDiv).appendTo(haikuDiv);
 }
+
+/*
+* syllableCount
+* @params - userString {string} and vowels {array -> strings}
+* return syllables
+ */
 function syllableCount(userString, vowels) {
     var syllables = 0;
         for (var i = 0; i <= vowels.length -1; i++) {
             for (var j = 0; j <= userString.length - 1; j++) {
-                if ((vowels[i] === userString[j]) && (userString[j] !== userString[j+1]) && (userString[j+1] !== ("a" || "e" || "i" || "o" || "u" || "y")) )  { //&& ( (userString[j+1] !== ("a" || "e" || "i" || "o" || "u" || "y")) && (userString[j-1] !== ("a" || "e" || "i" || "o" || "u" || "y")))) {
+                // if (current letter = vowel) AND (current letter DOES NOT EQUAL the next letter) AND (next letter does not equal another vowel
+                if ((vowels[i] === userString[j]) && (userString[j] !== userString[j+1]) && ( (userString[j+1] !== "a") && (userString[j+1] !== "e") && (userString[j+1] !== "i") && (userString[j+1] !== "o") && (userString[j+1] !== "u") && (userString[j+1] !=="y"))) {
                     syllables += 1;
                 }
             }
