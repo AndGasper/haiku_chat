@@ -40,7 +40,7 @@ function syllableCount(userString, vowels) {
     var syllables = 0;
         for (var i = 0; i <= vowels.length -1; i++) {
             for (var j = 0; j <= userString.length - 1; j++) {
-                if (vowels[i] === userString[j]) {
+                if ((vowels[i] === userString[j]) && (userString[j] !== userString[j+1]) && (userString[j+1] !== ("a" || "e" || "i" || "o" || "u" || "y")) )  { //&& ( (userString[j+1] !== ("a" || "e" || "i" || "o" || "u" || "y")) && (userString[j-1] !== ("a" || "e" || "i" || "o" || "u" || "y")))) {
                     syllables += 1;
                 }
             }
