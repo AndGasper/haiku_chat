@@ -67,6 +67,7 @@ syllableArray.push(line2Syllables);
 syllableArray.push(line3Syllables);
 
 
+
 for (var i = 0; i <= syllableArray.length -1; i++) {
     $(syllableArray[i]).appendTo(syllableOutputDiv);
 }
